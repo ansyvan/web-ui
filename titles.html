@@ -2,10 +2,15 @@
 <html lang="eng">
   <head>
     <meta charset="UTF-8">
-    <title>My first HTML lesson</title>
+    <title>My first HTML project</title>
   </head>
-  <body>
+  <body style="background-color:antiquewhite;">
+
     <p><i>Note:</i> The content inside the 'body' section starts here. The content inside the 'title' element will is shown in the browser's title bar or in the page's tab.</p>
+    <p>We can't see it but the 'lang="eng"' attribute was used in the 'html' tag. It declared that the language of this page is English. It will help the search engines and browsers.</p>
+    <p>The background color was set in the 'body style' attribute.</p>
+    <hr>
+
     <h1>This is a heading 1</h1>
     <h2>This is a heading 2</h2>
     <h3>This is a heading 3</h3>
@@ -13,38 +18,68 @@
     <h5>This is a heading 5</h5>
     <h6>This is a heading 6</h6>
     <hr>
+
     <p>This is a paragraph without line breaks.</p>
     <p>This is a paragraph <br> with <br> line breaks.</p>
     <p>Line breaks are made by 'br' tag.</p>
+    <p style="color:red;">This is a red paragraph. The 'style' attribute was used here to make a text red.</p>
+    <p style="font-size: 25px;">This is a paragraph in font-size 25px created by using the 'style' attribute.</p>
+    <p style="font-size: 160%;">This is a paragraph in font-size 160%. We can use % as an alternative of size measurement.</p>
+    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">This is a paragraph with the 'font-family' style attribute.</p>
+    <p title="I'm a tooltip">This paragraph has a tooltip. Mouse over it, to see 'title' attribute as a tooltip.</p>
+    <p style="background-color:burlywood;">This is a paragraph with the 'style' attribute 'background-color' set for this paragraph only.</p>
     <hr>
+
+    <h2 style="text-align: center;">Centered Heading</h2>
+    <p style="text-align: right;">Alined to the right paragraph.</p>
+    <p style="text-align: left;">Alined to the left paragraph.</p>
+    <hr>
+
     <p>This is a <a href="https://github.com/ansyvan/web-ui">link</a> to my GitHub repository. It was created by using: 'a href="https://URL"' tag.</p>
     <hr>
+
     Defining the image by using the 'img' tag: <br>
     <img src="https://avatars.githubusercontent.com/u/141010743?v=4" alt="My GitHub profile photo" width="100" height="100">
     <hr>
-    <p>This is <b>bold</b> tag.</p>
-    <p>This is <strong>strong</strong> tag. This is an alternative to the <bold>bold</bold> but has logical meaning and is more visible for search engines.</p>
-    <p>This is <i>italic</i> tag.</p>
-    <p>This is <em>em</em> - the alternative to the <i>italic</i> tag. It looks the same as <i>italic</i> but has logical meaning and is more visible for search engines.</p>
-    <p>This is <small>small</small> tag. It makes the text smaller than the parent element.</p>
-    <p>This is <sup>sup</sup> tag. It puts the text above the line.</p>
-    <p>This is <sub>sub</sub> tag. It puts the text under the line.</p>
-    <hr>
-    The following text is using 'pre' tag to save the spaces in the piece of code:
-  <pre>
+
+    <p>The following text is using 'pre' tag to save the spaces in the piece of code or poem. The text inside a 'pre' element is displayed in a fixed-width font (usual Courier).</p>
+    <pre>
 function toCelsius(fahrenheit) {
     return (5/9) * (fahrenheit-32);
 }
 document.getElementById("demo").innerHTML = toCelcius;
-  </pre>
+    </pre>
     <hr>
-    <blockquote>This is the quotation highlighted with the 'blockquote' tag.</blockquote>
-    <p>This is <mark>mark</mark> tag.</p>
+
+    <p>This is <b>bold</b> tag.</p>
+    <p>This is <strong>strong</strong> tag. This is an alternative to the <bold>bold</bold> but has logical meaning and is more visible for search engines.</p>
+    <p>This is <i>italic</i> tag.</p>
+    <p>This is <em>em</em> - the alternative to the <i>italic</i> tag. It looks the same as <i>italic</i> but has logical meaning and is more visible for search engines. The screen readers will read this text with an emphasis, using verbal stress.</p>
+    <p>This is <small>small</small> tag. It makes the text smaller than the parent element.</p>
+    <p>This is <sup>sup</sup> tag. It puts the text above the line. For example: WWW<sup>[1]</sup></p>
+    <p>This is <sub>sub</sub> tag. It puts the text under the line. For example: H<sub>2</sub>O</p>
+    <p>This is <mark>mark</mark> tag. Like highlighted with a marker.</p>
+    <p>This is <del>del</del> tag. It defines text that has been deleted from the document.</p>
+    <p>This is <ins>ins</ins> tag. It defines text that has been inserted in the document.</p>
+    <hr>
+
+    <p>Examples of using the quotation:</p>
+    <blockquote cite="https//:URL">This is the quotation highlighted with the 'blockquote' tag. It is indented by browser. It is used to define a section that is quoted from another source. Using 'cite="https//:URL"' attribute is a good practice to show the search engine where the tex was taken from.</blockquote>
+    <q>This is the quotation using 'q' tag that inserts the quotation marks around the q element.</q>
+    <p>The <abbr title="Hyper Text Markup Language">HTML</abbr> is using 'abbr' tag. Mouseover it to see the tooltip. It gives the useful information to browsers, translation systems, and search-engines.</p>
+    <p>This is 'address' tag used to define the contact information or the author of the text, or the owner of the document. For example:</p>
+    <address>
+      Written by Andriana Syvanych.<br>
+      Visit me at:<br>
+      https://github.com/ansyvan
+    </address>
+    <p>The 'cite' tag is used to define the title of a work. For example, <cite>The Scream</cite> by Edvard Munch.</p>
+    <hr>
 
     <p>The list of definitions by 'dl' tag:</p>
     <dl>
       <dt>
-        <abbr title="Hyper Text Markup Language">HTML</abbr> Definition - this title is using 'abbr' tag
+        Definition title One
       </dt>
       <dd>
         Definition description One
@@ -56,6 +91,7 @@ document.getElementById("demo").innerHTML = toCelcius;
         Definition description Two
       </dd>
     </dl>
+    <hr>
         
   </body>
 </html>
