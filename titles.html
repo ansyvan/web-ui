@@ -9,6 +9,8 @@
     <p><i>Note:</i> The content inside the 'body' section starts here. The content inside the 'title' element will is shown in the browser's title bar or in the page's tab.</p>
     <p>We can't see it but the 'lang="eng"' attribute was used in the 'html' tag. It declared that the language of this page is English. It will help the search engines and browsers.</p>
     <p>The background color was set in the 'body style' attribute.</p>
+    <!-- <p>This line is commented and is not displayed in bowser</p> -->
+    <p>We can't see he line between 'The background...' and this one because it is commented.</p>
     <hr>
 
     <h1>This is a heading 1</h1>
@@ -35,7 +37,7 @@
     <p style="text-align: left;">Alined to the left paragraph.</p>
     <hr>
 
-    <p>This is a <a href="https://github.com/ansyvan/web-ui">link</a> to my GitHub repository. It was created by using: 'a href="https://URL"' tag.</p>
+    <p>This is a <a href="https://github.com/ansyvan/web-ui" target="_blank">link</a> to my GitHub repository. It was created by using: 'a href="https://URL"' tag and 'target="_blank"' attribute to open the page in another tab.</p>
     <hr>
 
     Defining the image by using the 'img' tag: <br>
@@ -74,6 +76,10 @@ document.getElementById("demo").innerHTML = toCelcius;
       https://github.com/ansyvan
     </address>
     <p>The 'cite' tag is used to define the title of a work. For example, <cite>The Scream</cite> by Edvard Munch.</p>
+    <hr>
+
+    <p>Bi-directional override (bdo) tag is rewriting text from right to left dir="rtl":</p>
+    <bdo dir="rtl">This line is written from rigth to left.</bdo>
     <hr>
 
     <p>The list of definitions by 'dl' tag:</p>
