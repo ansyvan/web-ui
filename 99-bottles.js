@@ -1,3 +1,4 @@
+// Write a program that prints out the lyrics to "99 Bottles of Beer on the Wall"
 var word = "bottles";
 var count = 99;
 while (count > 1) {
