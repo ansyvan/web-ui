@@ -22,7 +22,6 @@ while (isSunk == false) {
             }
         } else {
             alert("MISS");
-            guesses = guesses + 1;
         }
     }
 }
