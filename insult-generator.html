@@ -1,0 +1,68 @@
+<!-- Now let’s create a random insult generator. The idea is simple:
+We have three arrays, each containing words that make up a silly insult.
+We randomly pick one word from each array and combine them to create an insult. -->
+
+<! doctype html>
+<html lang="en">
+    <head>
+        <title>Random Insult Generator</title>
+    </head>
+    <body>
+        <h1>Click the button to get an insult!</h1>
+        <button onclick="generateInsult()">Generate Insult</button>
+        <p id="insult"></p>
+        
+        <script>
+            function generateInsult() {
+                var bodyParts = [
+                    "face",
+                    "nose",
+                    "ears",
+                    "hair",
+                    "eyebrows",
+                    "toes",
+                    "knees",
+                    "elbows",
+                    "belly button",
+                    "chin",
+                    "feet"
+                ];
+                var adjectives = [
+                    "smelly",
+                    "lazy",
+                    "weird",
+                    "awkward",
+                    "grumpy",
+                    "stinky",
+                    "slimy",
+                    "fuzzy",
+                    "goofy",
+                    "clumsy",
+                    "hairy",
+                    "crooked",
+                    "muddy"
+                ];
+                var nouns = ["donkey",
+                    "cabbage",
+                    "monkey",
+                    "toad",
+                    "troll",
+                    "gnome",
+                    "buffoon",
+                    "dodo",
+                    "blobfish",
+                    "yak",
+                    "mushroom",
+                    "goblin"];
+
+                var randomBodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+                var randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+                var randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+
+                var randomInsult = "Your " + randomBodyPart + " is like a " + randomAdjective + " " + randomNoun + "!";
+
+                document.getElementById("insult").innerText = randomInsult;
+            }
+        </script>
+    </body>
+</html>
