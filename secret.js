@@ -34,4 +34,4 @@ console.log(secret);
 setSecret(superSecretFile, 2, "Dr. Evel's next meeting is in Philadelphia.");
 secret = getSecret(superSecretFile, 2);
 console.log(secret);
-console.log(superSecretFile.opened);
+console.log(superSecretFile.opened);    
