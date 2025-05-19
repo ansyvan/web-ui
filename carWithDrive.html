@@ -134,13 +134,13 @@
                 }
             };
 
+            fiat.start();       // Try to drive before refueling — will fail with "out of fuel" message
+            fiat.drive();       // Alerts: "The car is on empty! Fill up before starting."
+            fiat.addFuel(2);    // Alerts: "Fuel is added."
+            fiat.checkFuel();   // Alerts: "Fuel level is 2"
             fiat.start();
-            fiat.drive();
-            fiat.addFuel(2);
-            fiat.checkFuel();
-            fiat.start();
-            fiat.drive();
-            fiat.stop();
+            fiat.drive();       // Drive the car — this consumes 1 unit of fuel
+            fiat.stop();        // Alerts: "Fiat stopped. The fuel left: 1"
 
             cadi.start();
             cadi.drive();
