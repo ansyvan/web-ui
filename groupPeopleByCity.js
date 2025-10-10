@@ -1,8 +1,5 @@
-/* Live Coding Challenge #1: Grouping Objects by a Property
-The Task:
-
+/* Grouping Objects by a Property
 You are given an array of objects, where each object represents a person with a name and a city.
-
 Write a function called groupPeopleByCity that takes this array as an argument.
 
 The function should process the array and return a new object.
