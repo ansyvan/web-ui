@@ -15,28 +15,44 @@ Output should look like:
 */
 
 function groupPeopleByCity(peopleArray) {
-    const result = {}                         // 1. Start with an empty object
-    for (const person of peopleArray) {
-      const cityName = person.city;
-      const personName = person.name;
+  const result = {}; // 1. Start with an empty object
+  for (const person of peopleArray) {
+    const cityName = person.city;
+    const personName = person.name;
 
-      if (person.city in result) {            // 2. Check if the city key already exists
-        result[cityName].push(personName)     // 3. If YES, push the new name into the existing array
-      } else {
-        result[cityName] = [personName]       // 4. If NO, create a new key with a new array containing the name
-      }
+    if (person.city in result) {
+      // 2. Check if the city key already exists
+      result[cityName].push(personName); // 3. If YES, push the new name into the existing array
+    } else {
+      result[cityName] = [personName]; // 4. If NO, create a new key with a new array containing the name
     }
-
-    return result
   }
 
-  const people = [
-    { name: "Alice", city: "London" },
-    { name: "Bob", city: "Paris" },
-    { name: "Charlie", city: "London" },
-    { name: "Diana", city: "New York" },
-    { name: "Eve", city: "Paris" },
-  ];
-  
-  const grouped = groupPeopleByCity(people);
-  console.log(grouped);
+  return result;
+}
+
+function groupPeopleByCityWithReduce(peopleArray) {
+  return peopleArray.reduce((accumulator, person) => {
+    const city = person.city;
+    // If the city key doesn't exist yet, create it with an empty array
+    if (!accumulator[city]) {
+      accumulator[city] = [];
+    }
+    // Push the person's name into the array for that city
+    accumulator[city].push(person.name);
+    return accumulator;
+  }, {}); // Start with an empty object as the initial value
+}
+
+const people = [
+  { name: "Alice", city: "London" },
+  { name: "Bob", city: "Paris" },
+  { name: "Charlie", city: "London" },
+  { name: "Diana", city: "New York" },
+  { name: "Eve", city: "Paris" },
+];
+
+const grouped = groupPeopleByCity(people);
+const groupedWithReduce = groupPeopleByCityWithReduce(people);
+console.log(grouped);
+console.log(groupedWithReduce);
